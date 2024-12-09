@@ -6,7 +6,7 @@ export const Connect = () => {
           <a
             data-social="linkedin"
             aria-label="LinkedIn"
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/thisisanshrastogi/"
           >
             <div className="filled"></div>
             <svg
@@ -30,7 +30,7 @@ export const Connect = () => {
           <a
             data-social="github"
             aria-label="GitHub"
-            href="https://www.github.com/"
+            href="https://github.com/thisisanshrastogi"
           >
             <div className="filled"></div>
             <svg
@@ -78,7 +78,7 @@ export const Connect = () => {
           <a
             data-social="youtube"
             aria-label="Youtube"
-            href="https://youtube.com/"
+            href="mailto:thisisanshrastogi@gmail.com"
           >
             <div className="filled"></div>
             <svg
