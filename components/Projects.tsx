@@ -1,22 +1,17 @@
-import { cn } from "@/lib/utils";
+"use client";
+
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bentogrid";
 import Image from "next/image";
+
 import { FaGitAlt, FaGithub, FaNodeJs, FaReact } from "react-icons/fa";
 
-import {
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
-import { image } from "framer-motion/client";
 import { SiExpress, SiFlask, SiPostgresql, SiWebrtc } from "react-icons/si";
 
 import mediapipeIcon from "@/public/mediapipe.svg";
 import jwticon from "@/public/jwticon.svg";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { link } from "fs";
+
 const mediapipe = () => {
   return <Image src={mediapipeIcon} alt="icon" width={30} height={30} />;
 };
@@ -27,7 +22,7 @@ const jwt = () => {
 
 export function BentoGridSecondDemo() {
   return (
-    <BentoGrid className="max-w-[75%] mx-auto md:auto-rows-[23rem]">
+    <BentoGrid className="max-w-[75%] mx-auto md:auto-rows-[23rem]  relative  z-[20] card">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -58,12 +53,30 @@ const items = [
     image: "/taxiHome.png",
     className: "md:col-span-3 ",
     icons: [
-      <FaReact />,
-      <SiExpress />,
-      <FaNodeJs />,
-      <RiTailwindCssFill />,
-      <SiPostgresql />,
-      jwt(),
+      {
+        logo: <FaReact />,
+        name: "ReactJS",
+      },
+      {
+        logo: <SiExpress />,
+        name: "Express",
+      },
+      {
+        logo: <FaNodeJs />,
+        name: "NodeJs",
+      },
+      {
+        logo: <RiTailwindCssFill />,
+        name: "TailwindCSS",
+      },
+      {
+        logo: <SiPostgresql />,
+        name: "Postgresql",
+      },
+      {
+        logo: jwt(),
+        name: "JWT",
+      },
     ],
     content:
       "Open Source Taxi pooling application that connects people travelling to same destination.",
@@ -75,18 +88,31 @@ const items = [
     image: "/gitgame.png",
     className: "md:col-span-2",
     icons: [
-      <RiNextjsLine className="text-4xl" />,
-      <FaGithub className="text-4xl" />,
-      <FaGitAlt className="text-4xl" />,
-      <RiTailwindCssFill className="text-4xl" />,
+      {
+        logo: <RiNextjsLine className="text-4xl" />,
+        name: "NextJS",
+      },
+      {
+        logo: <FaGithub className="text-4xl" />,
+        name: "Github",
+      },
+      {
+        logo: <FaGitAlt className="text-4xl" />,
+        name: "Git",
+      },
+      {
+        logo: <RiTailwindCssFill className="text-4xl" />,
+        name: "TailwindCSS",
+      },
     ],
     link: "https://github.com/gdg-iiitk/git-game",
     content:
       "An interactive game where you do git operations to solve the levels and learn git in a fun way.",
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Portfolio",
+    description:
+      "This portfolio website built using nextjs , framer-motion and aceternity",
     header: <Skeleton />,
     className: "md:col-span-2",
   },
@@ -95,7 +121,28 @@ const items = [
     description:
       "A Video Calling app with real-time sign language translation.",
     image: "/signwave.png",
-    icons: [<FaReact />, <SiWebrtc />, <SiFlask />, <RiTailwindCssFill />],
+    icons: [
+      {
+        logo: <FaReact />,
+        name: "ReactJS",
+      },
+      {
+        logo: <SiWebrtc />,
+        name: "WebRTC",
+      },
+      {
+        logo: <SiFlask />,
+        name: "Flask",
+      },
+      {
+        logo: <RiTailwindCssFill />,
+        name: "TailwindCSS",
+      },
+      {
+        logo: mediapipe(),
+        name: "Mediapipe",
+      },
+    ],
     link: "https://github.com/thisisanshrastogi/signwave_frontend",
     content:
       "A WebRTC based video calling app that supports ASL gesture recognition . Looking forward to develop and integrate an ASL model that can recognize a larger vocabulary along with contexts",

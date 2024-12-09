@@ -1,6 +1,6 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const FlipWords = ({
@@ -84,7 +84,7 @@ export const FlipWords = ({
                   delay: wordIndex * 0.3 + letterIndex * 0.06,
                   duration: 0.2,
                 }}
-                className="inline-block bg-gradient-to-b from-indigo-300 to-slate-100 bg-clip-text text-transparent"
+                className="inline-block bg-gradient-to-b from-indigo-100 to-slate-100 bg-clip-text text-transparent"
               >
                 {letter}
               </motion.span>
