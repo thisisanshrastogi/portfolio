@@ -46,44 +46,53 @@ export default function Home() {
             }}
             className="gradient-bg-another py-20  "
           >
-            <motion.h1
-              className="block w-full text-center text-5xl md:text-7xl  tracking-wide py-10 "
-              id="about"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-            >
-              About Me!
-            </motion.h1>
             <motion.div
-              className="flex items-center justify-center my-5"
-              initial={{ scale: 0.7, opacity: 0.2 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              // transition={{
-              //   duration: 4,
-              //   type: "spring",
-              //   stiffness: 150,
-              //   damping: 15,
-              // }}
+              className="animationDiv "
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              whileInView={{ scale: 1, opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.2,
+
+                ease: "easeInOut",
+              }}
             >
-              <div className=" w-[80%] md:w-[1000px] min-h-[400px] border-[2px] border-white-100/[0.4] rounded-3xl px-6 py-6 bg-white/[0.1]  antialiased text-lg  leading-9  text-justify backdrop-brightness-110">
-                <p>
-                  Hi! I’m a Computer Science student at IIIT Kottayam and a tech
-                  enthusiast who loves turning ideas into reality with code. I
-                  specialize in full-stack web development, working with the
-                  MERN stack and Next.js to build fun and impactful projects.
-                  <br />
-                  I’ve dabbled in some cool tech like WebSockets, MediaPipe, and
-                  WebRTC to create real-time and interactive applications. On
-                  the database side, I’m comfortable with MongoDB, MySQL, and
-                  PostgreSQL, so handling data is right up my alley.
-                  <br />
-                  When it comes to the frontend, Tailwind CSS is my go-to for
-                  designing sleek and responsive layouts. For backend magic, I
-                  use Node.js and Express to make sure everything runs smoothly
-                  behind the scenes. I’m always curious and excited to learn new
-                  things, whether it’s experimenting with new tools or solving
-                  tricky problems.
-                </p>
+              <h1
+                className="block w-full text-center text-5xl md:text-7xl  tracking-wide py-10 "
+                id="about"
+              >
+                About Me!
+              </h1>
+              <div
+                className="flex items-center justify-center my-5"
+
+                // transition={{
+                //   duration: 4,
+                //   type: "spring",
+                //   stiffness: 150,
+                //   damping: 15,
+                // }}
+              >
+                <div className=" w-[80%] md:w-[1000px] min-h-[400px] border-[2px] border-white-100/[0.4] rounded-3xl px-6 py-6 bg-white/[0.1]  antialiased text-lg  leading-9  text-justify backdrop-brightness-110">
+                  <p>
+                    Hi! I’m a Computer Science student at IIIT Kottayam and a
+                    tech enthusiast who loves turning ideas into reality with
+                    code. I specialize in full-stack web development, working
+                    with the MERN stack and Next.js to build fun and impactful
+                    projects.
+                    <br />
+                    I’ve dabbled in some cool tech like WebSockets, MediaPipe,
+                    and WebRTC to create real-time and interactive applications.
+                    On the database side, I’m comfortable with MongoDB, MySQL,
+                    and PostgreSQL, so handling data is right up my alley.
+                    <br />
+                    When it comes to the frontend, Tailwind CSS is my go-to for
+                    designing sleek and responsive layouts. For backend magic, I
+                    use Node.js and Express to make sure everything runs
+                    smoothly behind the scenes. I’m always curious and excited
+                    to learn new things, whether it’s experimenting with new
+                    tools or solving tricky problems.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>

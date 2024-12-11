@@ -23,13 +23,13 @@ export const BentoGrid = ({
         "grid md:auto-rows-[20rem] grid-cols-1 md:grid-cols-5 gap-6  ",
         className
       )}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0.5, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.5,
-        ease: "easeIn",
+        duration: 0.2,
+        ease: "easeInOut",
         type: "spring",
-        stiffness: 100,
+        stiffness: 150,
       }}
     >
       {children}

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export const FlipWords = ({
   words,
-  duration = 2000,
+  duration = 1200,
   className,
 }: {
   words: string[];
@@ -46,7 +46,7 @@ export const FlipWords = ({
         }}
         transition={{
           type: "spring",
-          stiffness: 140,
+          stiffness: 100,
           damping: 8,
         }}
         exit={{
