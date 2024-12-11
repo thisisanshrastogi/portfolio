@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Favicon from "/public/favicon.ico";
 // import localFont from "next/font/local";
 import "./globals.css";
 // import { inter } from "./fonts/fonts";
@@ -21,9 +21,7 @@ import { ThemeProvider } from "next-themes";
 export const metadata: Metadata = {
   title: "Ansh Rastogi",
   description: "My dev Portfolio",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({
