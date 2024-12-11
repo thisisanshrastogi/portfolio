@@ -45,7 +45,7 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-[100vw] h-full z-10 ", className)}
     >
-      <div className="absolute left-5  top-3 z-40">
+      <div className="absolute -left-4 md:left-5  top-3 z-40">
         <motion.div
           transition={{
             duration: 0.2,
@@ -81,7 +81,7 @@ export const TracingBeam = ({
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
           height={svgHeight} // Set the SVG height
-          className=" ml-4 block"
+          className=" ml-4 block "
           aria-hidden="true"
         >
           <motion.path
@@ -123,7 +123,7 @@ export const TracingBeam = ({
       <div ref={contentRef} className="z-20">
         {children}
       </div>
-      <div className="absolute right-8  top-3 z-40">
+      <div className="rightbeam hidden md:block absolute right-8  top-3 z-40">
         <motion.div
           transition={{
             duration: 0.5,

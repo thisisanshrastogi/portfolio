@@ -56,24 +56,20 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-6 z-40 inset-x-0 mx-auto border border-neutral-400 border-opacity-50 rounded-xl backdrop-blur-lg   shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  py-4 px-5 items-center justify-center space-x-10  ",
+          "hidden md:flex max-w-fit fixed top-6 z-40 inset-x-0 mx-auto border border-neutral-400 border-opacity-50 rounded-xl backdrop-blur-lg   shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  py-4 px-5 items-center justify-center space-x-10   ",
           className
         )}
       >
         {navItems.map(
-          (
-            navItem: { name: string; link: string; icon?: JSX.Element },
-            idx: number
-          ) => (
+          (navItem: { name: string; link: string }, idx: number) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative text-neutral-50 items-center flex space-x-1  hover:text-neutral-300 font-semibold "
+                "relative text-neutral-50 items-center flex space-x-1   hover:text-neutral-300 font-semibold "
               )}
             >
-              <span className="block sm:hidden">{navItem.icon}</span>
-              <span className="hidden sm:block text-md">{navItem.name}</span>
+              <span className=" sm:block text-md">{navItem.name}</span>
             </Link>
           )
         )}

@@ -20,7 +20,7 @@ export const BentoGrid = ({
   return (
     <motion.div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-5 gap-6  ",
+        "grid md:auto-rows-[20rem] grid-cols-1 md:grid-cols-5 gap-6  ",
         className
       )}
       initial={{ opacity: 0, y: 50 }}
@@ -61,11 +61,11 @@ export const BentoGridItem = ({
     <Modal>
       <div
         className={cn(
-          "relative row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 max-h-[350px]  shadow-input dark:shadow-none p-2 dark:backdrop-blur-3xl dark:border-white/[0.6]  border-[1.5px] border-transparent flex flex-col  justify-between space-y-4  ",
+          "relative row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 min-h-[200px] max-h-[350px]  shadow-input dark:shadow-none p-2 dark:backdrop-blur-3xl dark:border-white/[0.6]  border-[1.5px] border-transparent flex flex-col  justify-between space-y-4  ",
           className
         )}
       >
-        <ModalTrigger className=" w-full h-full relative overflow-hidden ">
+        <ModalTrigger className=" w-full h-full relative overflow-hidden   ">
           <Image
             src={image || "/next.svg"}
             alt="taxiBuddy"
@@ -74,11 +74,11 @@ export const BentoGridItem = ({
             className="rounded-2xl"
           />
 
-          <div className="group-hover/bento:translate-x-2 transition duration-200 absolute bottom-2 bg-neutral-900 bg-opacity-70 px-6 py-1 w-[97%]">
+          <div className="group-hover/bento:translate-x-2 transition duration-75 absolute bottom-2 bg-neutral-900 bg-opacity-70 px-6 py-1 w-[97%]">
             <div className="font-sans font-bold text-neutral-600 dark:text-neutral-100 mb-1 mt-2 text-lg">
               {title}
             </div>
-            <div className="font-sans font-normal text-neutral-600 text-md dark:text-neutral-200">
+            <div className="font-sans font-normal text-neutral-600 text-md dark:text-neutral-200 hidden md:block">
               {description}
             </div>
           </div>

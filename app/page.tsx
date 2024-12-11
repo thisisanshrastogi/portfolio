@@ -13,7 +13,7 @@ export default function Home() {
           <Hero />
 
           <motion.h1
-            className="block w-full text-center text-7xl  tracking-wide py-10 my-6 "
+            className="block w-full text-center text-5xl md:text-7xl  tracking-wide py-4 md:py-10 my-6 "
             style={{ backgroundColor: "rgb(0, 3, 18)" }}
             id="projects"
             initial={{ opacity: 1, y: 50 }}
@@ -47,7 +47,7 @@ export default function Home() {
             className="gradient-bg-another py-20  "
           >
             <motion.h1
-              className="block w-full text-center text-7xl  tracking-wide py-10 "
+              className="block w-full text-center text-5xl md:text-7xl  tracking-wide py-10 "
               id="about"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -58,21 +58,31 @@ export default function Home() {
               className="flex items-center justify-center my-5"
               initial={{ scale: 0.7, opacity: 0.2 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              transition={{
-                duration: 1,
-                type: "spring",
-                stiffness: 150,
-                damping: 15,
-              }}
+              // transition={{
+              //   duration: 4,
+              //   type: "spring",
+              //   stiffness: 150,
+              //   damping: 15,
+              // }}
             >
-              <div className=" w-[700px] h-[400px] border-[2px] border-white-100/[0.4] rounded-3xl px-6 py-6 bg-white/[0.1]  antialiased text-lg  leading-9  text-justify">
+              <div className=" w-[80%] md:w-[1000px] min-h-[400px] border-[2px] border-white-100/[0.4] rounded-3xl px-6 py-6 bg-white/[0.1]  antialiased text-lg  leading-9  text-justify backdrop-brightness-110">
                 <p>
-                  Hi! I am a Computer Science student at IIIT Kottayam and a
-                  passionate tech enthusiast. I love exploring and creating with
-                  technology. Currently, I specialize in full-stack web
-                  development using the MERN stack and Next.js. With a curious
-                  mind and a drive for learning, I am always eager to tackle new
-                  challenges and build impactful projects.
+                  Hi! I’m a Computer Science student at IIIT Kottayam and a tech
+                  enthusiast who loves turning ideas into reality with code. I
+                  specialize in full-stack web development, working with the
+                  MERN stack and Next.js to build fun and impactful projects.
+                  <br />
+                  I’ve dabbled in some cool tech like WebSockets, MediaPipe, and
+                  WebRTC to create real-time and interactive applications. On
+                  the database side, I’m comfortable with MongoDB, MySQL, and
+                  PostgreSQL, so handling data is right up my alley.
+                  <br />
+                  When it comes to the frontend, Tailwind CSS is my go-to for
+                  designing sleek and responsive layouts. For backend magic, I
+                  use Node.js and Express to make sure everything runs smoothly
+                  behind the scenes. I’m always curious and excited to learn new
+                  things, whether it’s experimenting with new tools or solving
+                  tricky problems.
                 </p>
               </div>
             </motion.div>
@@ -104,7 +114,7 @@ export default function Home() {
               <motion.h1
                 initial={{ opacity: 0.5, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="block text-center text-7xl  tracking-wide pb-3  transition-opacity "
+                className="block text-center text-4xl md:text-7xl  tracking-wide pb-3  transition-opacity "
               >
                 Connect
               </motion.h1>

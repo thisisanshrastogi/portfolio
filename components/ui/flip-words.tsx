@@ -46,12 +46,12 @@ export const FlipWords = ({
         }}
         transition={{
           type: "spring",
-          stiffness: 100,
-          damping: 10,
+          stiffness: 140,
+          damping: 8,
         }}
         exit={{
           opacity: 0,
-          y: -80,
+          y: 80,
 
           filter: "blur(18px)",
 
@@ -84,7 +84,7 @@ export const FlipWords = ({
                   delay: wordIndex * 0.3 + letterIndex * 0.06,
                   duration: 0.2,
                 }}
-                className="inline-block bg-gradient-to-b from-indigo-100 to-slate-100 bg-clip-text text-transparent"
+                className="inline-block bg-gradient-to-b from-violet-200 to-slate-100 bg-clip-text text-transparent font-[500]"
               >
                 {letter}
               </motion.span>

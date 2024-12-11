@@ -22,7 +22,7 @@ const jwt = () => {
 
 export function BentoGridSecondDemo() {
   return (
-    <BentoGrid className="max-w-[75%] mx-auto md:auto-rows-[23rem]  relative  z-[20] card">
+    <BentoGrid className="max-w-[70vw] mx-auto auto-rows-auto md:auto-rows-[22rem]  relative  z-[20] card">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -51,7 +51,7 @@ const items = [
       "A taxi pooling application that connects people , travelling to same destination.",
 
     image: "/taxiHome.png",
-    className: "md:col-span-3 ",
+    className: "col-span-1 md:col-span-3 ",
     icons: [
       {
         logo: <FaReact />,
@@ -86,7 +86,7 @@ const items = [
     title: "Git-Game",
     description: "An Interactive way to test your git skills.",
     image: "/gitgame.png",
-    className: "md:col-span-2",
+    className: "col-span-1 md:col-span-2",
     icons: [
       {
         logo: <RiNextjsLine className="text-4xl" />,
@@ -114,7 +114,7 @@ const items = [
     description:
       "This portfolio website built using nextjs , framer-motion and aceternity",
     header: <Skeleton />,
-    className: "md:col-span-2",
+    className: "col-span-1 md:col-span-2",
   },
   {
     title: "SignWave",
@@ -146,6 +146,6 @@ const items = [
     link: "https://github.com/thisisanshrastogi/signwave_frontend",
     content:
       "A WebRTC based video calling app that supports ASL gesture recognition . Looking forward to develop and integrate an ASL model that can recognize a larger vocabulary along with contexts",
-    className: "md:col-span-3 ",
+    className: "col-span-1 md:col-span-3 ",
   },
 ];

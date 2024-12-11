@@ -5,8 +5,21 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --motion-width-1: 30rem;
+  --motion-width-2: 15rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --motion-width-1: 16rem;
+    --motion-width-2: 8rem;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
+  border-radius: 4px;
   background-color: black; /* Background color of the scrollbar track */
 }
 
@@ -113,6 +126,23 @@ ul {
   width: 30px;
   height: 30px;
 }
+
+@media (max-width: 700px) {
+  /* Styles for screens smaller than the breakpoint */
+  .example-2 .icon-content a svg {
+    width: 25px;
+    height: 25px;
+  }
+  .example-2 {
+    column-gap: 1.5rem;
+  }
+
+  .example-2 .icon-content a {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .example-2 .icon-content a:hover {
   color: white;
 }
@@ -154,4 +184,39 @@ ul {
 .example-2 .icon-content a[data-social="youtube"] .filled,
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ea4335;
+}
+
+/* Scroll down */
+/* From Uiverse.io by ArturCodeCraft */
+/* <reset-style> ============================ */
+a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+/* .main__scroll-text {
+  color: rgba(255, 255, 255, 0.507);
+} */
+
+.main__action .main__scroll-box {
+  animation: scroll-down 1.5s ease-in-out infinite;
+  color: rgb(255, 255, 255);
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(0rem);
+    opacity: 0.5;
+  }
+
+  /* 35% {
+    transform: translateY(0.5rem);
+    opacity: 1;
+  } */
+
+  50% {
+    transform: translateY(-0.5rem);
+    opacity: 0.5;
+  }
 }

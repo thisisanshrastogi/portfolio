@@ -2,11 +2,13 @@ export const Connect = () => {
   return (
     <div>
       <ul className="example-2">
-        <li className="icon-content">
+        <li className="icon-content ">
           <a
             data-social="linkedin"
             aria-label="LinkedIn"
             href="https://www.linkedin.com/in/thisisanshrastogi/"
+            className=""
+            target="_blank"
           >
             <div className="filled"></div>
             <svg
@@ -31,6 +33,7 @@ export const Connect = () => {
             data-social="github"
             aria-label="GitHub"
             href="https://github.com/thisisanshrastogi"
+            target="_blank"
           >
             <div className="filled"></div>
             <svg
@@ -54,7 +57,8 @@ export const Connect = () => {
           <a
             data-social="instagram"
             aria-label="Instagram"
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/itsanshrastogi/"
+            target="_blank"
           >
             <div className="filled"></div>
             <svg
