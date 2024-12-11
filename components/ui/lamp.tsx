@@ -25,7 +25,7 @@ export function LampDemo({ title }: { title: string }) {
         />
         <br></br>
 
-        <div className="text-5xl md:text-7xl font-[500]">
+        <div className="text-5xl md:text-7xl font-[500] ">
           I am <span className="block md:inline pt-4">Ansh Rastogi</span>
         </div>
       </motion.h1>

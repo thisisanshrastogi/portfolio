@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 // import localFont from "next/font/local";
 import "./globals.css";
 // import { inter } from "./fonts/fonts";
@@ -18,8 +19,11 @@ import { ThemeProvider } from "next-themes";
 // });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Ansh Rastogi",
   description: "My dev Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {/* <head>
+        <link rel="icon" href="/favicon.ico" sizes=""/>
+      </head> */}
       <body className={`${ubuntu.className} antialiased dark`}>
         <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
       </body>
